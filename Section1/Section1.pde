@@ -46,14 +46,14 @@ class Visualizer {
     for(int i = 0; i < values.length; i ++){
       float newH = values[i];
       if(newH < 0){
+        fill(225, 0, 0);
+        rect(currentX, currentY, 40, Math.abs(newH));
+      }else if(newH > 0){
         if(values[i] > 50 && values[i] < 100){
           fill(0,225,0);
         }else{
           fill(225,225,0);
         }
-        rect(currentX, currentY, 40, Math.abs(newH));
-      }else if(newH > 0){
-        fill(0, 255, 0);
         rect(currentX, currentY - newH, 40, Math.abs(newH));
       }
       currentX += addNum;
