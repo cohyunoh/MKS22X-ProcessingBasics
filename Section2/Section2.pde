@@ -27,11 +27,7 @@ void gasket(int level, float v1x, float v1y, float v2x, float v2y, float v3x, fl
       triangle((v1x + v3x) / 2, (v1y + v3y) / 2, (v2x + v3x) / 2, (v2y + v3y) / 2, (v1x + v2x) / 2, (v2y + v1y) / 2);
       gasket(level - 1, v1x, v1y, (v1x + v3x) / 2, (v1y + v3y) / 2, (v1x + v2x) / 2, (v2y + v1y) / 2);
       gasket(level - 1, v2x, v2y, (v2x + v3x) / 2, (v2y + v3y) / 2, (v1x + v2x) / 2, (v2y + v1y) / 2);
-      float x1 = (v1x + v3x) / 2;
-      float y1 = (v1y + v3y) / 2;
-      float x2 = (v2x + v3x) / 2;
-      float y2 = (v2y + v3y) / 2;
-      gasket(level - 1, (x1 + x2) / 2, (y1 + y2) / 2, (v1x + v3x) / 2, (v1y + v3y) / 2, (v1x + v2x) / 2, (v2y + v1y) / 2);
+      gasket(level - 1, v3x, v3y, (v1x + v3x) / 2, (v1y + v3y) / 2, (v2x + v3x) / 2, (v2y + v3y) / 2);
     }
 }
 
