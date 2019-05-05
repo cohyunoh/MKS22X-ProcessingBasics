@@ -46,7 +46,11 @@ class Visualizer {
     for(int i = 0; i < values.length; i ++){
       float newH = values[i];
       if(newH < 0){
-        fill(225, 0, 0);
+        if(values[i] > -50){
+          fill(255,145,0);
+        }else{
+          fill(225,0,0);
+        }
         rect(currentX, currentY, 40, Math.abs(newH));
       }else if(newH > 0){
         if(values[i] > 50 && values[i] < 100){
