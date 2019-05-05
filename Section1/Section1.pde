@@ -65,6 +65,11 @@ class Visualizer {
     for (int i = 0; i < values.length; i++) {
       values[i] += speeds[i]; //the speed updates the values. Do not touch this.
       //??? keep them values between max/min value so they stay in the box.
+      if(values[i] > 50 && values[i] < 100){
+        fill(0,225,0);
+      }else{
+        fill(225,0,0);
+      }
       if(100 + values[i] <= 0){
         speeds[i] = speeds[i] * -1;
       }else if(100 + values[i] >= 200){
